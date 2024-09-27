@@ -1,0 +1,15 @@
+
+.campo-texto label {
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: bold; 
+    color: #333; 
+}
+
+.campo-texto input {
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-shadow: 6px 8px 5px rgb(99, 98, 98);
+}

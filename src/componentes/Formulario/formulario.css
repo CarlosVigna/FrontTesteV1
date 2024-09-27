@@ -1,0 +1,26 @@
+.formulario {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 60vh; 
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #afacac;
+    max-width: 80%;
+    width: 500px;
+    margin-bottom: 20px;
+    box-shadow: 8px 8px 5px rgb(216, 212, 212);
+  }
+
+  .botao-enviar-cadastro {
+    display: flex;
+    justify-content: center; 
+    
+  }
