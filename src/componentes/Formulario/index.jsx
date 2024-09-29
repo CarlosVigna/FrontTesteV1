@@ -18,10 +18,12 @@ const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, on
                         name={campo.name}
                     />
                 ))}
-                <div className='botao-enviar-cadastro'>
+                <div className='botao-container'>
                     <Botao 
                         texto={botaoTexto} 
                         onClick={onSubmit}
+                        className='botao-enviar-cadastro'
+
                     />
                 </div>
             </form>

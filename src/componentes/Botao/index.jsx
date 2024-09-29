@@ -1,14 +1,11 @@
-import './botao.css'
+import './botao.css'; // Certifique-se de que o caminho esteja correto
 
-const Botao = (props) => {
+const Botao = ({ texto, onClick, className }) => {
     return (
-        <button className='botao' onClick={props.onClick}>
-
-            {props.texto}
-
+        <button className={`botao ${className}`} onClick={onClick}>
+            {texto}
         </button>
-
-    )
+    );
 }
 
-export default Botao
+export default Botao;

@@ -42,7 +42,7 @@ const Login = () => {
             <Formulario 
                 titulo="Login"
                 campos={camposLogin}
-                botaoTexto="Entrar" 
+                botaoTexto="Entrar" className="botao-login"
                 handleInputChange={handleInputChange}
                 valores={valores}
                 onSubmit={handleLogin}

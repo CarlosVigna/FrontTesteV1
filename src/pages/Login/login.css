@@ -1,0 +1,9 @@
+.botao-login {
+    background-color: #007bff; /* Cor diferente para o botão de login */
+    font-size: 16px; /* Aumentar o tamanho da fonte */
+    padding: 12px 24px; /* Mais espaçamento */
+}
+
+.botao-login:hover {
+    background-color: #0056b3; /* Cor diferente no hover para o botão de login */
+}
