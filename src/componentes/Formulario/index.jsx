@@ -2,7 +2,7 @@ import CampoTexto from '../CampoTexto';
 import './formulario.css';
 import Botao from '../Botao';
 
-const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, onSubmit }) => {
+const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, onSubmit, className }) => {
     return (
         <div className='formulario'>
             <form onSubmit={onSubmit}>
@@ -18,11 +18,11 @@ const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, on
                         name={campo.name}
                     />
                 ))}
-                <div className='botao-container'>
+                <div>
                     <Botao 
                         texto={botaoTexto} 
                         onClick={onSubmit}
-                        className='botao-enviar-cadastro'
+                        className={className}
 
                     />
                 </div>

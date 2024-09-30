@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px;
-    
+    text-decoration: none;
 }
 
 .nav-left {
@@ -18,15 +18,13 @@
 }
 
 .nav-left a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: black;
 }
 
 .botao-container {
     display: flex;
     gap: 16px;
+    text-decoration: none;
 }
 
-.botao-login {
-    
-}

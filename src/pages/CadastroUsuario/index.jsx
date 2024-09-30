@@ -76,6 +76,7 @@ function CadastroUsuario() {
                 titulo="Cadastro de Usuário"
                 campos={camposCadastro}
                 botaoTexto="Enviar Cadastro" 
+                className="botao-cadastrar"
                 handleInputChange={handleInputChange}
                 valores={valores}
                 onSubmit={handleCadastro}

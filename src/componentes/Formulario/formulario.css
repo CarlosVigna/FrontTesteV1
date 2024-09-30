@@ -12,21 +12,15 @@
     gap: 12px;
     padding: 20px;
     border-radius: 4px;
-    background-color: #ee5555;
+    background-color: #085659;
     max-width: 80%;
     width: 500px;
     margin-bottom: 20px;
-    box-shadow: 8px 8px 5px #755656;
+    box-shadow: 8px 8px 5px #04292a;
   }
 
-  .botao-enviar-cadastro {
-    background-color: #a86363; 
-    font-size: 20px; 
-    padding: 12px 24px; 
-           
-  }
- 
-
-.botao-enviar-cadastro:hover {
-    background-color: #ffffff;
+  h2 {
+    color: white; 
+   
 }
+
