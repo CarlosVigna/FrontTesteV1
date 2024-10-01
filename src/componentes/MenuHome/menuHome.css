@@ -28,3 +28,14 @@
     text-decoration: none;
 }
 
+.botao-cadastrar {
+    background-color: #0199a1; 
+    font-size: 16px; 
+    padding: 12px 24px;
+    text-decoration: none; 
+}
+
+.botao-cadastrar:hover {
+    background-color: #085659; 
+    text-decoration: none;
+}

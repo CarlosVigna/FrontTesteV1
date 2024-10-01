@@ -18,7 +18,8 @@ const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, on
                         name={campo.name}
                     />
                 ))}
-                <div>
+                <div className='botao-container'>
+                    
                     <Botao 
                         texto={botaoTexto} 
                         onClick={onSubmit}

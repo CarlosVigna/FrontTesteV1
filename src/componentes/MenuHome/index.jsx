@@ -7,7 +7,7 @@ import Botao from '../Botao';
 
 
 
-function MenuHome() {
+function MenuHome({ scrollToCadastro }) {
     return (
         <nav className='nav'>
             <div className='nav-left'>
@@ -24,9 +24,9 @@ function MenuHome() {
                     <Botao texto="Login" className="botao-login" />
                 </Link>
                 
-                <Link to='/cadastro'>
-                    <Botao texto="Cadastrar" />
-                </Link>
+                
+                    <Botao texto="Cadastrar" className="botao-cadastrar" onClick={scrollToCadastro}/>
+                                   
                 
             </div>
 
