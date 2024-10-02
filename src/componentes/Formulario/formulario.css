@@ -1,27 +1,47 @@
 .formulario {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 60vh; 
-    margin-top: 80px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  padding: 25px;
+  align-items: flex-start;
+  margin-bottom: 80px;
   
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    padding: 20px;
-    border-radius: 4px;
-    background-color: #085659;
-    max-width: 80%;
-    width: 500px;
-    margin-bottom: 20px;
-    box-shadow: 8px 8px 5px #04292a;
-  }
-
-  h2 {
-    color: white; 
-   
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  max-width: 80%;
+  width: 500px;
+  margin-bottom: 20px;
+  box-shadow: 8px 8px 5px #272b2b;
+  border: 2px solid #8cbabd;
+}
+
+.header {
+  display: flex;
+  align-items: center; 
+  gap: 16px; 
+}
+
+h2 {
+  color: rgb(49, 48, 48);
+  flex-grow: 1; 
+}
+
+.img-form {
+  max-width: 20%; 
+  height: auto; 
+  display: flex; 
+}
+
+.img-form img {
+  width: 100%; 
+  height: auto; 
+}

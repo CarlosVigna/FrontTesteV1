@@ -6,7 +6,12 @@ const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, on
     return (
         <div className='formulario'>
             <form onSubmit={onSubmit}>
+                <div className='header'>
+                    <div className='img-form'>
+                <img src='/imagens/logo-cadastrar.JPG' />
+                    </div>
                 {titulo && <h2>{titulo}</h2>}
+                </div>
                 {campos.map((campo, index) => (
                     <CampoTexto 
                         key={index}

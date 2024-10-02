@@ -71,8 +71,9 @@ function CadastroUsuario() {
     ];
 
     return (
-        <div>
+        <div className='contai-cadastro'>
             <Formulario 
+                
                 titulo="Cadastro de Usuário"
                 campos={camposCadastro}
                 botaoTexto="Enviar Cadastro" 

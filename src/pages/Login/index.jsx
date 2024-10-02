@@ -38,7 +38,7 @@ const Login = () => {
     ];
 
     return (
-        <div>
+        <div className='container-login'>
             <Formulario 
                 titulo="Login"
                 campos={camposLogin}

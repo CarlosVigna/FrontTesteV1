@@ -1,8 +1,12 @@
 .card-container {
     display: flex;
     justify-content: center; 
-    padding: 20px;
+    padding: 40px;
     background-color: #8cbabd; 
+    padding-bottom: 80px;
+    padding-top: 80px;
+    
+    
 }
 
 .card {

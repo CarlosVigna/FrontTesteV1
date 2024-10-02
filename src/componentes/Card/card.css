@@ -1,34 +1,44 @@
-.container{
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+  background-color: #8cbabd;
+  max-width: 100%;
+  padding: 0;
+}
 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 70vh; 
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  width: 100%; /* Ocupa 100% da largura do contêiner pai */
+  max-width: 400px; /* Ajuste conforme necessário */
+  margin: 0; /* Remove qualquer margem */
+  box-shadow: 8px 8px 5px #4a7272;
+  border: 2px solid #8cbabd;
+}
 
-  
-   .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    padding: 20px;
-    border-radius: 4px;
-    background-color: #01696e;
-    max-width: 100%;
-    width: 360px;
-    margin-bottom: 20px;
-    box-shadow: 8px 8px 5px #0199a1;
-  }
+.botao-container {
+  display: flex; /* Adicionado para o alinhamento correto */
+  justify-content: center;
+  margin-top: 20px;
+}
 
 .botao-card {
-    background-color: #ffffff; 
-    font-size: 20px; 
-    padding: 12px 24px; 
-    display: flex;
-    justify-content: center; 
+  background-color: #0199a1; 
+  font-size: 16px; 
+  padding: 12px 24px;
+  text-decoration: none; 
+  border-radius: 4px;
+  border: none;
 }
 
 .botao-card:hover {
-    background-color: #ffffff;
+  background-color: #085659; 
+  text-decoration: none;
 }

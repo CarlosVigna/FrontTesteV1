@@ -3,7 +3,7 @@
     display: block; 
     margin-bottom: 8px; 
     font-weight: bold; 
-    color: #ffffff; 
+    color: rgb(49, 48, 48); 
 }
 
 .campo-texto input {
@@ -11,5 +11,5 @@
     padding: 8px; 
     border: 1px solid #ccc; 
     border-radius: 4px; 
-    box-shadow: 6px 8px 5px rgb(99, 98, 98);
+    box-shadow: 6px 8px 5px rgb(185, 185, 185);
 }
