@@ -1,11 +1,11 @@
 .table-container {
-    max-height: 700px; /* Aumente para o que você precisar */
-    overflow-y: auto; /* Permite rolagem vertical */
-    overflow-x: auto; /* Permite rolagem horizontal */
-    border: 1px solid #ccc; /* Borda ao redor do contêiner */
-    border-radius: 8px; /* Borda arredondada */
-    margin-top: 20px; /* Espaçamento superior, se necessário */
-    margin-bottom: 20px; /* Espaçamento inferior, se necessário */
+    max-height: 700px; 
+    overflow-y: auto; 
+    overflow-x: auto; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
     background-color: #0199a1; 
     padding: 10px;
 }
@@ -16,23 +16,22 @@
 
 .filter-container select,
 .filter-container input[type="date"] {
-    padding: 10px; /* Ajuste o padding conforme necessário */
-    margin-right: 15px; /* Aumenta a distância à direita */
-    border: 1px solid #ccc; /* Borda consistente */
-    border-radius: 4px; /* Bordas arredondadas */
-    background-color: #fff; /* Fundo branco para os campos */
-    width: 150px; /* Define uma largura padrão */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil */
+    padding: 10px; 
+    margin-right: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #fff; 
+    width: 150px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .filter-container {
-    display: flex; /* Adiciona Flexbox */
-    justify-content: center; /* Centraliza os itens */
+    display: flex; 
+    justify-content: center; 
     margin-bottom: 10px;
 }
 
-.titulo-lancamentos h1{
-    text-align: center; /* Centraliza o texto horizontalmente */
-    margin-bottom: 25px; /* Espaço abaixo do título, opcional */
-    
-    }
+.titulo-lancamentos h1 {
+    text-align: center; 
+    margin-bottom: 25px; 
+}

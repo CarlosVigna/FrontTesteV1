@@ -1,5 +1,5 @@
 .container-transacao {
-    display: flex; /* Ativa o Flexbox */
+    display: flex;
     width: 100%;
     background-color:#8cbabd;
     justify-content: center; 
@@ -7,7 +7,7 @@
 }
 
 .formulario-transacao {
-    flex: 0 0 650px; /* O formulário ocupa 60% da largura do contêiner */
+    flex: 0 0 650px; 
     padding: 20px;    
     border-radius: 8px;
     box-sizing: border-box;
@@ -43,7 +43,7 @@
 .titulo-transacao {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Altera para 100% para ocupar a largura disponível */
+    width: 100%;
 }
 
 .grid-container {
@@ -126,20 +126,20 @@
     padding: 1000px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Permite rolagem horizontal, se necessário */
-    overflow-y: auto; /* Permite rolagem vertical */
-    max-height: 300px; /* Define uma altura máxima para a lista */
-    transition: transform 0.3s; /* Adiciona uma transição suave ao contêiner */
+    overflow-x: auto;
+    overflow-y: auto; 
+    max-height: 300px; 
+    transition: transform 0.3s; 
 }
 
 .lista-titulos:hover {
-    transform: scale(1.02); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+    transform: scale(1.02);
 }
 
 .lista-titulos ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Remove margens para um espaçamento uniforme */
+    margin: 0; 
 }
 
 .lista-titulos li {
@@ -147,23 +147,23 @@
     padding: 10px;
     background-color: #eaeaea;
     border-radius: 5px;
-    position: relative; /* Permite posicionar o pseudo-elemento */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    position: relative; 
+    transition: background-color 0.3s; 
 }
 
 .lista-titulos li:hover {
-    background-color: #d1d1d1; /* Muda a cor de fundo ao passar o mouse */
+    background-color: #d1d1d1; 
 }
 
 .lista-titulos li::before {
-    content: "✔️"; /* Ícone antes do item */
+    content: "✔️"; 
     position: absolute;
-    left: 10px; /* Espaçamento à esquerda */
+    left: 10px;
     top: 50%;
-    transform: translateY(-50%); /* Centraliza verticalmente */
+    transform: translateY(-50%); 
 }
 
 .lista-titulos li:not(:last-child) {
-    border-bottom: 1px solid #ccc; /* Divisor entre os itens */
-    padding-bottom: 5px; /* Espaçamento inferior */
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 5px; 
 }

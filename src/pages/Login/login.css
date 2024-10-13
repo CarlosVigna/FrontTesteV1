@@ -2,7 +2,7 @@
         display: flex;
         justify-content: center; 
         align-items: flex-start;
-        height: 50vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+        height: 50vh; 
         background-color: #8cbabd;
         max-width: 100%;
         padding: 0;

@@ -11,17 +11,17 @@ async function cadastrarCategoria(categoria) {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(categoria), // Certifique-se de que está enviando a 'categoria'
+            body: JSON.stringify(categoria), 
         });
         
         if (!response.ok) {
             const errorData = await response.json();
-            console.error("Erro na API:", errorData); // Exiba o erro da API no console
+            console.error("Erro na API:", errorData); 
             throw new Error('Erro ao cadastrar categoria: ' + errorData.message);
         }
 
         const data = await response.json();
-        console.log("Resposta da API:", data); // Exibe a resposta no console para depuração
+        console.log("Resposta da API:", data); 
         return data;
 
     } catch (error) {
@@ -62,7 +62,7 @@ function CadastroCategoria() {
                 tipo: ''
             });
 
-            setErro(""); // Limpa a mensagem de erro
+            setErro(""); 
 
         } catch (error) {
             setErro(error.message || "Erro ao cadastrar Categoria. Tente novamente.");

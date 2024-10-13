@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center; 
   align-items: flex-start;
-  height: auto; /* Garante que o contêiner ocupe toda a altura da viewport */
+  height: auto;
   background-color: #085659;
   max-width: 100%;
   padding: 0;
@@ -16,15 +16,15 @@
   padding: 20px;
   border-radius: 4px;
   background-color: #ffffff;
-  width: 100%; /* Ocupa 100% da largura do contêiner pai */
-  max-width: 300px; /* Ajuste conforme necessário */
-  margin: 0; /* Remove qualquer margem */
+  width: 100%; 
+  max-width: 300px; 
+  margin: 0; 
   box-shadow: 8px 8px 5px #4a7272;
   border: 2px solid #8cbabd;
 }
 
 .botao-container {
-  display: flex; /* Adicionado para o alinhamento correto */
+  display: flex; 
   justify-content: center;
   margin-top: 20px;
 }

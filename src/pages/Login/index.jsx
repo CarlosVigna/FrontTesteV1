@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Formulario from '../../componentes/Formulario';
 import './login.css';
 
@@ -8,6 +9,7 @@ const Login = () => {
         senha: ''
     });
     const [erro, setErro] = useState("");
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -18,7 +20,6 @@ const Login = () => {
     };
 
     const handleLogin = async () => {
-       
         const { email, senha } = valores;
 
         
@@ -27,9 +28,36 @@ const Login = () => {
             return;
         }
 
-        
-        setValores({ email: '', senha: '' });
-        setErro("");
+        try {
+            
+            const response = await fetch('http://localhost:8080/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, senha })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                const token = data.token;
+
+                
+                localStorage.setItem('token', token);
+
+             
+                setValores({ email: '', senha: '' });
+                setErro("");
+
+              
+                navigate('/lista-titulo');
+            } else {
+                const errorData = await response.json();
+                setErro(errorData.message || "Erro ao fazer login.");
+            }
+        } catch (error) {
+            setErro("Erro ao conectar com o servidor.");
+        }
     };
 
     const camposLogin = [
@@ -47,9 +75,7 @@ const Login = () => {
                 valores={valores}
                 onSubmit={handleLogin}
             />
-
-{erro && <p style={{ color: 'red' }}>{erro}</p>}
-            
+            {erro && <p style={{ color: 'red' }}>{erro}</p>}
         </div>
     );
 }

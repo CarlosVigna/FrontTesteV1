@@ -19,7 +19,7 @@ const FormularioTransacao = () => {
     const [statusTransacao, setStatusTransacao] = useState('Em Aberto');
 
 
-    // Função pra mudança nos campos de entrada
+    
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         if (name === 'titulo') setTitulo(value);
@@ -40,11 +40,11 @@ const FormularioTransacao = () => {
         const novoTitulo = { titulo, valor: valorTitulo };
         setTitulos([...titulos, novoTitulo]);
 
-        // Reseta os campos
+        
         resetarCamposTitulo();
     };
 
-    // Procura titulo
+    
     const procurarTitulo = (e) => {
         e.preventDefault();
         const tituloEncontrado = titulos.find((t) => t.titulo === titulo);
@@ -57,7 +57,7 @@ const FormularioTransacao = () => {
         }
     };
 
-    // Reseta os campos 
+   
     const resetarCamposTitulo = () => {
         setTitulo('');
         setValorTitulo(0);
