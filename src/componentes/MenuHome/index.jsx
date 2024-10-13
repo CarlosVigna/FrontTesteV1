@@ -16,6 +16,9 @@ function MenuHome({ scrollToCadastro }) {
                     <Nav.Link as={Link} to="/home">Página Inicial</Nav.Link>
                     <Nav.Link as={Link} to="/home">Sobre</Nav.Link>
                     <Nav.Link as={Link} to="/contas">Contas</Nav.Link>
+                    <Nav.Link as={Link} to="/cadastroTitulo">Cadastro de Titulos</Nav.Link>
+                    <Nav.Link as={Link} to="/listaTitulo">Listagem de Titulos</Nav.Link>
+                    <Nav.Link as={Link} to="/cadastrarCategoria">Cadastro Categoria</Nav.Link>
                 </Nav>
             </div>
             <div className='botao-container'>

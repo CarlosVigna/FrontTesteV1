@@ -1,0 +1,169 @@
+.container-transacao {
+    display: flex; /* Ativa o Flexbox */
+    width: 100%;
+    background-color:#8cbabd;
+    justify-content: center; 
+    align-items: center;
+}
+
+.formulario-transacao {
+    flex: 0 0 650px; /* O formulário ocupa 60% da largura do contêiner */
+    padding: 20px;    
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.formulario-transacao h2 {
+    color: rgb(49, 48, 48);
+    text-align: center;
+    margin: 0; 
+    width: 100%;
+  }
+
+  .header {
+    display: block ;
+    align-items: center; 
+    justify-content: flex-start; 
+    
+}
+
+.header h2 {
+    color: rgb(49, 48, 48);
+    text-align: center; 
+    font-size: 40px;
+}
+
+.img-form {
+    margin-right: 20px; 
+}
+
+
+.titulo-transacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Altera para 100% para ocupar a largura disponível */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.botao-container {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botao-salvar, .botao-sair, .botao-procurar {
+    display: flex;
+    gap: 10px;
+    background-color: #0199a1; 
+    font-size: 16px; 
+    padding: 12px 24px;
+    text-decoration: none; 
+    border-radius: 4px;
+    
+}
+
+.botao-procurar {
+    margin-top: 15px;
+}
+
+.botao-salvar:hover, .botao-sair:hover, .botao-procurar:hover {
+    background-color: #085659; 
+    text-decoration: none;
+}
+
+.formulario-transacao select {
+    margin-top: 8px;
+    font-size: 16px; 
+    color: #333; 
+    padding: 8px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 6px 8px 5px rgb(185, 185, 185);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.formulario-transacao select:hover,
+.formulario-transacao select:focus {
+    border-color: #0199a1;
+    outline: none;
+    box-shadow: 0 0 8px rgba(1, 153, 161, 0.6);
+}
+
+.formulario-transacao label {
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    color: rgb(49, 48, 48); 
+}
+
+.status-transacao,
+.tipo-transacao {
+    display: flex;
+    flex-direction: column; 
+    width: 100%; 
+    margin-bottom: 10px; 
+}
+
+.status-transacao label,
+.tipo-transacao label {
+    margin-top: 10px;
+    margin-bottom: 3px; 
+    font-weight: bold; 
+    height: 22px;
+    color: rgb(49, 48, 48); 
+}
+
+
+.lista-titulos {
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite rolagem horizontal, se necessário */
+    overflow-y: auto; /* Permite rolagem vertical */
+    max-height: 300px; /* Define uma altura máxima para a lista */
+    transition: transform 0.3s; /* Adiciona uma transição suave ao contêiner */
+}
+
+.lista-titulos:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+}
+
+.lista-titulos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove margens para um espaçamento uniforme */
+}
+
+.lista-titulos li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    position: relative; /* Permite posicionar o pseudo-elemento */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.lista-titulos li:hover {
+    background-color: #d1d1d1; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.lista-titulos li::before {
+    content: "✔️"; /* Ícone antes do item */
+    position: absolute;
+    left: 10px; /* Espaçamento à esquerda */
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.lista-titulos li:not(:last-child) {
+    border-bottom: 1px solid #ccc; /* Divisor entre os itens */
+    padding-bottom: 5px; /* Espaçamento inferior */
+}

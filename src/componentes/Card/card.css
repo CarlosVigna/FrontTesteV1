@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center; 
   align-items: flex-start;
-  height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
-  background-color: #8cbabd;
+  height: auto; /* Garante que o contêiner ocupe toda a altura da viewport */
+  background-color: #085659;
   max-width: 100%;
   padding: 0;
 }
@@ -17,7 +17,7 @@
   border-radius: 4px;
   background-color: #ffffff;
   width: 100%; /* Ocupa 100% da largura do contêiner pai */
-  max-width: 400px; /* Ajuste conforme necessário */
+  max-width: 300px; /* Ajuste conforme necessário */
   margin: 0; /* Remove qualquer margem */
   box-shadow: 8px 8px 5px #4a7272;
   border: 2px solid #8cbabd;

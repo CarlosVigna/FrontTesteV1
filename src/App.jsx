@@ -5,8 +5,12 @@ import Footer from './componentes/Footer';
 import CadastroUsuario from './pages/CadastroUsuario';
 import Login from './pages/Login';
 import Contas from './pages/Contas';
+import CadastroTitulo from './pages/CadastroTitulo';
 import BodyHome from './componentes/BodyHome';
+import ListaTitulo from './pages/ListaTitulo';
+import CadastroCategoria from './pages/CadastroCategoria';
 import { useRef, useState, useEffect } from 'react'; 
+
 
 function App() {
     const cadastroRef = useRef(null);
@@ -35,7 +39,7 @@ function App() {
   return (
     <div id="root">
       <MenuHome scrollToCadastro={scrollToCadastro} /> 
-      <Banner /> 
+      {location.pathname !== '/cadastroTitulo' && <Banner />} 
 
       <main>
         <Routes>
@@ -43,6 +47,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/contas" element={<Contas />} />
           <Route path="/cadastro" element={<CadastroUsuario />} /> 
+          <Route path="/cadastroTitulo" element={<CadastroTitulo />} /> 
+          <Route path="/listaTitulo" element={<ListaTitulo />} /> 
+          <Route path="/cadastrarCategoria" element={<CadastroCategoria />} /> 
         </Routes>
 
         

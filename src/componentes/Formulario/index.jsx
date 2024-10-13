@@ -2,7 +2,7 @@ import CampoTexto from '../CampoTexto';
 import './formulario.css';
 import Botao from '../Botao';
 
-const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, onSubmit, className }) => {
+const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, onSubmit, className, layout }) => {
     return (
         <div className='formulario'>
             <form onSubmit={onSubmit}>
@@ -12,6 +12,7 @@ const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, on
                     </div>
                 {titulo && <h2>{titulo}</h2>}
                 </div>
+                <div className={`campos-container ${layout}`}>
                 {campos.map((campo, index) => (
                     <CampoTexto 
                         key={index}
@@ -23,6 +24,7 @@ const Formulario = ({ titulo, campos, botaoTexto, handleInputChange, valores, on
                         name={campo.name}
                     />
                 ))}
+                </div>
                 <div className='botao-container'>
                     
                     <Botao 
