@@ -1,0 +1,58 @@
+.categoria-container {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-categorias {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-categorias h1 {
+    color: rgb(49, 48, 48);
+    font-size: 24px;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-container label {
+    font-weight: bold; 
+    color: rgb(49, 48, 48); 
+}
+
+.table-categorias {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-categorias th,
+.table-categorias td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.table-categorias th {
+    background-color: #2C3E50;
+    color: #ffffff;
+}
+
+.table-categorias tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-categorias tr:hover {
+    background-color: #d1d1d1;
+}
+
+.table-categorias tr td {
+    border-bottom: 1px solid #eaeaea;
+}
