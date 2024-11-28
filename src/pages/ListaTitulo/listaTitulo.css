@@ -14,38 +14,6 @@
     font-size: 48px;
 }
 
-.lista-titulos-container:hover {
-    transform: scale(1.02);
-}
-
-.lista-titulos-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.lista-titulos-container li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    position: relative; 
-    transition: background-color 0.3s; 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.lista-titulos-container li::before {
-    content: "✔️"; 
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%); 
-}
-
-.lista-titulos-container li:not(:last-child) {
-    border-bottom: 1px solid #ccc; 
-    padding-bottom: 5px; 
-}
-
 .titulo-transacao label {
     display: block;
     font-weight: bold;

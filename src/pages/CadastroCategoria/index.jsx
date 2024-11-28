@@ -7,10 +7,12 @@ const URL = "http://localhost:8080";
 
 async function cadastrarCategoria(categoria) {
     try {
+        const token = localStorage.getItem('token');
         const response = await fetch(URL + "/categorias", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(categoria), 
         });
@@ -93,7 +95,7 @@ function CadastroCategoria() {
 
     return (
         <div className='container-categoria'>
-            <div className='header'>
+            <div className='header-categoria'>
             <Formulario 
                 titulo="Cadastro de Categoria"
                 campos={camposCadastro}
@@ -106,13 +108,13 @@ function CadastroCategoria() {
             {erro && <p style={{ color: 'red' }}>{erro}</p>}
 
             </div>
-         <div className='lista-container'>
+         
             <div className='lista-categorias'>
             <ListaCategorias refresh={refresh}/>
 
             </div>
          </div>
-         </div>
+        
 
         
     );

@@ -1,17 +1,24 @@
 .categoria-container {
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #999898;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 150px;
+    max-height: 450px;
+    overflow-y: auto; 
+    overflow-x: auto; 
+    color: #ffffff;
+    
 }
 
 .titulo-categorias {
     text-align: center;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .titulo-categorias h1 {
-    color: rgb(49, 48, 48);
+    color: rgb(255, 255, 255);
     font-size: 24px;
 }
 
@@ -24,7 +31,25 @@
 
 .filter-container label {
     font-weight: bold; 
-    color: rgb(49, 48, 48); 
+    color: rgb(255, 255, 255); 
+}
+
+.filter-container select,
+.filter-container input[type="date"] {
+    padding: 10px; 
+    margin-right: 15px; 
+    border: 1px solid #ced4da;
+    border-radius: 6px; 
+    background-color: #f8f9fa; 
+    width: 150px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+.filter-container select:focus,
+.filter-container input[type="date"]:focus {
+    border-color: #80bdff;
+    outline: none;
 }
 
 .table-categorias {
@@ -33,24 +58,32 @@
     margin-top: 10px;
 }
 
-.table-categorias th,
+.table-categorias thead {
+    background-color: #ebf4f5; 
+}
+
+
 .table-categorias td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
 }
 
 .table-categorias th {
-    background-color: #2C3E50;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #fffefe;
+    background-color: #2f3031;
     color: #ffffff;
 }
 
 .table-categorias tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #585757; 
 }
 
 .table-categorias tr:hover {
-    background-color: #d1d1d1;
+    background-color: #80bdff;
+    transition: background-color 0.2s ease;
 }
 
 .table-categorias tr td {

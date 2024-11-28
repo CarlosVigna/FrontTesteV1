@@ -6,7 +6,7 @@ const URL = "http://localhost:8080";
 
 async function cadastrarUsuario(usuario) {
     console.log("Enviando dados para o backend:", usuario);  // Log para ver os dados que estão sendo enviados
-    const response = await fetch (URL + "/auth/register", {
+    const response = await fetch (URL + "/usuarios", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
