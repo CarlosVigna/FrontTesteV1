@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './contasPagar.css';
+import './contasPagas.css';
 
 
-const ContasPagar = () => {
+const ContasPagas = () => {
     const [dados, setDados] = useState([]);
     const [filterStartDate, setFilterStartDate] = useState('');
     const [filterEndDate, setFilterEndDate] = useState('');
     const [error, setError] = useState(null);
-  
 
     const fetchDados = async () => {
         try {
@@ -19,7 +18,7 @@ const ContasPagar = () => {
                 return;
             }
 
-            const response = await fetch(`http://localhost:8080/titulos/pag-aberto?contaId=${idConta}`, {
+            const response = await fetch(`http://localhost:8080/titulos/pagos?contaId=${idConta}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -67,16 +66,14 @@ const ContasPagar = () => {
 
     const totalValor = filteredData.reduce((total, item) => total + Number(item.valor), 0);
 
-
+    
 
     return (
-        <div className='rel-pagar-container'>
-            <div className='titulo-contas-pagar'>
-                <h1>Contas a Pagar</h1>
+        <div className='rel-pagas-container'>
+            <div className='titulo-contas-pagas'>
+                <h1>Contas Pagas</h1>
             </div>
-
-
-
+           
             <div className='filter-rel-container'>
                 <label htmlFor="startDate" className='rel-white-label'>Data Inicial:</label>
                 <input
@@ -95,7 +92,7 @@ const ContasPagar = () => {
             </div>
 
             <div className="cabecalho-container">
-                <strong>Relatório de Contas a Pagar</strong>
+                <strong>Relatório de Contas Pagas</strong>
                 <p>
                     <strong>Período: </strong>
                     {filterStartDate && filterEndDate
@@ -105,11 +102,11 @@ const ContasPagar = () => {
                 <p><strong>Data de Geração:</strong> {new Date().toLocaleString('pt-BR')}</p>
             </div>
 
+
             <table className="rel-table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Núm. Doc.</th>
-                        <th scope="col">Descrição</th>
                         <th scope="col">Data Emissão</th>
                         <th scope="col">Venc.</th>
                         <th scope="col">Categoria</th>
@@ -120,22 +117,22 @@ const ContasPagar = () => {
                     {filteredData.map((item) => (
                         <tr key={item.id}>
                             <td>{item.id}</td>
-                            <td>{item.descricao}</td>
                             <td>{new Date(item.emissao).toLocaleDateString('pt-BR')}</td>
                             <td>{new Date(item.vencimento).toLocaleDateString('pt-BR')}</td>
                             <td>{item.categoria.nome}</td>
                             <td>{Number(item.valor).toFixed(2).replace('.', ',')}</td>
+
                         </tr>
                     ))}
                 </tbody>
             </table>
 
             <div className="totalizador-container">
-                <span>Total a Pagar: R$ {totalValor.toFixed(2).replace('.', ',')}</span>
+                <span>Total Recebido: R$ {totalValor.toFixed(2).replace('.', ',')}</span>
             </div>
 
         </div>
     );
 };
 
-export default ContasPagar;
+export default ContasPagas;

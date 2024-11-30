@@ -19,6 +19,7 @@ import ContasReceber from './pages/ContasReceber';
 import ContasPagar from './pages/ContasPagar';
 import Sobre from './pages/Sobre';
 import ContasRecebidas from './pages/ContasRecebidas';
+import ContasPagas from './pages/ContasPagas';
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -54,6 +55,9 @@ function App() {
           <Route path="/relContasReceber" element={<PrivateRoute><ContasReceber /></PrivateRoute>} />
           <Route path="/relContasPagar" element={<PrivateRoute><ContasPagar /></PrivateRoute>} />
           <Route path="/relRecebimentos" element={<PrivateRoute><ContasRecebidas /></PrivateRoute>} />
+          <Route path="/relPagamentos" element={<PrivateRoute><ContasPagas /></PrivateRoute>} />
+
+          
 
 
         </Routes>

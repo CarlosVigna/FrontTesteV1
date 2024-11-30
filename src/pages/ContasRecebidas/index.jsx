@@ -7,8 +7,6 @@ const ContasRecebidas = () => {
     const [filterStartDate, setFilterStartDate] = useState('');
     const [filterEndDate, setFilterEndDate] = useState('');
     const [error, setError] = useState(null);
-    const [filterTipo, setFilterTipo] = useState('Recebimento');
-    const [filterStatus, setFilterStatus] = useState('Recebido');
 
     const fetchDados = async () => {
         try {
@@ -20,7 +18,7 @@ const ContasRecebidas = () => {
                 return;
             }
 
-            const response = await fetch(`http://localhost:8080/titulos?contaId=${idConta}`, {
+            const response = await fetch(`http://localhost:8080/titulos/recebidos?contaId=${idConta}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -60,11 +58,11 @@ const ContasRecebidas = () => {
         const startDate = filterStartDate ? new Date(filterStartDate) : null;
         const endDate = filterEndDate ? new Date(filterEndDate) : null;
 
-        const tipoMatch = item.categoria.tipo === filterTipo;
-        const statusMatch = item.status === filterStatus;
+        // const tipoMatch = item.categoria.tipo === filterTipo;
+        // const statusMatch = item.status === filterStatus;
         const dateMatch = (!startDate || itemVenc >= startDate) && (!endDate || itemVenc <= endDate);
 
-        return tipoMatch && dateMatch && statusMatch;
+        return dateMatch;
     });
 
     const totalValor = filteredData.reduce((total, item) => total + Number(item.valor), 0);

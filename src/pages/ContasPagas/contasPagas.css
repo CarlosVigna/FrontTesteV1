@@ -1,4 +1,4 @@
-.rel-recebidas-container {
+.rel-pagas-container {
     padding: 20px;
     background-color: #c0bebe;
     border-radius: 8px;
@@ -7,12 +7,12 @@
     margin: 0 auto;
 }
 
-.titulo-contas-recebidas {
+.titulo-contas-pagas {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.titulo-contas-recebidas h1 {
+.titulo-contas-pagas h1 {
     color: rgb(49, 48, 48);
     font-size: 36px;
 }
