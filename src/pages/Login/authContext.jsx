@@ -20,17 +20,17 @@ export const AuthProvider = ({ children }) => {
         const storedUserId = localStorage.getItem('usuarioId');
         
         if (storedToken && storedUserId) {
-            // Valide o token, se possível
+
             try {
                 const decodedToken = jwtDecode(storedToken);
-                // Cheque se o token ainda é válido (ex.: data de expiração)
+
                 if (decodedToken && Date.now() < decodedToken.exp * 1000) {
                     setIsAuthenticated(true);
                 } else {
-                    logout(); // Limpa os dados inválidos
+                    logout(); 
                 }
             } catch (error) {
-                logout(); // Limpa os dados se houver erro na decodificação
+                logout(); 
             }
         }
     }, []);

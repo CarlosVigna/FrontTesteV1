@@ -22,7 +22,6 @@ const Contas = () => {
             }
 
             try {
-                // Modificado para remover o userId da URL
                 const response = await fetch('http://localhost:8080/contas/usuario', {
                     method: 'GET',
                     headers: {

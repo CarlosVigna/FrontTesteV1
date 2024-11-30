@@ -10,7 +10,6 @@ const CriarConta = () => {
     const navigate = useNavigate();
     const [error, setError] = useState(null);
     
-    // Carregar usuários disponíveis
     useEffect(() => {
         const fetchUsuarios = async () => {
             try {
@@ -27,7 +26,7 @@ const CriarConta = () => {
                 }
 
                 const usuariosData = await response.json();
-                setTodosUsuarios(usuariosData); // Armazena todos os usuários
+                setTodosUsuarios(usuariosData);
             } catch (error) {
                 setError(error.message);
             }
@@ -36,35 +35,32 @@ const CriarConta = () => {
         fetchUsuarios();
     }, []);
 
-    // Função para tratar a seleção de usuários
     const handleUsuarioSelect = (usuarioId) => {
         setSelectedUsuarios(prevSelectedUsuarios => {
-            // Verifica se o usuário já está selecionado
+
             const isSelected = prevSelectedUsuarios.includes(usuarioId);
-            // Se já estiver selecionado, remove. Se não estiver, adiciona.
+
             return isSelected 
                 ? prevSelectedUsuarios.filter(id => id !== usuarioId) 
                 : [...prevSelectedUsuarios, usuarioId];
         });
     };
 
-    // Função de envio do formulário
+
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        // Obtém o ID do usuário logado que está salvo no localStorage
-        const usuarioIdLogado = localStorage.getItem('id'); // ID do usuário logado
+        const usuarioIdLogado = localStorage.getItem('id'); 
     
-        // Filtra os usuários selecionados para garantir que o usuário logado não seja enviado novamente
         const usuariosParaEnviar = selectedUsuarios.filter(id => id !== usuarioIdLogado);
     
         const dadosConta = {
             descricao,
             foto,
-            usuarios: usuariosParaEnviar, // IDs dos usuários selecionados (sem o logado)
+            usuarios: usuariosParaEnviar, 
         };
     
-        console.log("Dados a serem enviados:", dadosConta); // Log dos dados a serem enviados
+        console.log("Dados a serem enviados:", dadosConta); 
     
         try {
             const token = localStorage.getItem('token');
@@ -83,7 +79,7 @@ const CriarConta = () => {
     
             navigate('/contas');
         } catch (error) {
-            console.error("Erro ao criar conta:", error); // Log de erro no frontend
+            console.error("Erro ao criar conta:", error); 
             alert(error.message);
         }
     };

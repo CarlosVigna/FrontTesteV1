@@ -5,7 +5,7 @@ import './cadastroUsuario.css';
 const URL = "http://localhost:8080";
 
 async function cadastrarUsuario(usuario) {
-    console.log("Enviando dados para o backend:", usuario);  // Log para ver os dados que estão sendo enviados
+    console.log("Enviando dados para o backend:", usuario);  
     const response = await fetch (URL + "/usuarios", {
         method: "POST",
         headers: {
@@ -14,9 +14,9 @@ async function cadastrarUsuario(usuario) {
         body: JSON.stringify(usuario),
     });
 
-    console.log("Resposta da requisição:", response);  // Log para ver a resposta do fetch
+    console.log("Resposta da requisição:", response);  
     const data = await response.json();
-    console.log("Dados retornados do backend:", data);  // Log para ver os dados recebidos do backend
+    console.log("Dados retornados do backend:", data);  
     return data;
 }
 
@@ -29,11 +29,11 @@ function CadastroUsuario() {
     });
 
     const [erro, setErro] = useState("");
-    const [sucesso, setSucesso] = useState("");  // Para mostrar mensagens de sucesso
+    const [sucesso, setSucesso] = useState(""); 
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        console.log(`Campo alterado: ${name}, Novo valor: ${value}`);  // Log para ver as alterações de campos
+        console.log(`Campo alterado: ${name}, Novo valor: ${value}`); 
         setValores({
             ...valores,
             [name]: value
@@ -42,37 +42,37 @@ function CadastroUsuario() {
 
     const handleCadastro = async (e) => {
         e.preventDefault();
-        console.log("Iniciando cadastro com os seguintes dados:", valores);  // Log para ver os dados do formulário no momento da submissão
+        console.log("Iniciando cadastro com os seguintes dados:", valores);  
 
         const { nome, email, senha, confirmarSenha } = valores;
 
         if (senha !== confirmarSenha) {
-            console.log("Erro: As senhas não coincidem!");  // Log de erro quando as senhas não coincidem
+            console.log("Erro: As senhas não coincidem!"); 
             setErro("As senhas não coincidem!");
             return;
         }
 
         const novoUsuario = { nome, email, senha };
-        console.log("Dados do novo usuário para cadastro:", novoUsuario);  // Log para ver os dados do novo usuário
+        console.log("Dados do novo usuário para cadastro:", novoUsuario);  
 
         try {
             const data = await cadastrarUsuario(novoUsuario);
-            console.log("Dados após o cadastro:", data);  // Log para ver a resposta após o cadastro
+            console.log("Dados após o cadastro:", data);  
 
-            if (data && data.id) {  // Verifica se o cadastro foi bem-sucedido com base na resposta
-                setSucesso("Cadastro realizado com sucesso!");  // Exibe mensagem de sucesso
+            if (data && data.id) {  
+                setSucesso("Cadastro realizado com sucesso!");  
                 setValores({
                     nome: '',
                     email: '',
                     senha: '',
                     confirmarSenha: ''
                 });
-                setErro("");  // Reseta o erro se o cadastro foi bem-sucedido
+                setErro("");  
             } else {
                 setErro("Erro ao cadastrar Usuário. Tente novamente.");
             }
         } catch (error) {
-            console.log("Erro ao tentar cadastrar usuário:", error);  // Log de erro caso a requisição falhe
+            console.log("Erro ao tentar cadastrar usuário:", error); 
             setErro("Erro ao cadastrar Usuário. Tente novamente.");
         }
     };

@@ -49,7 +49,7 @@ const equipe = [
 const Sobre = () => {
   return (
     <div className="sobre-container">
-      {/* Introdução ao Projeto */}
+
       <section className="sobre-introducao">
         <h2>Sobre o Projeto</h2>
         <p>
@@ -65,7 +65,6 @@ const Sobre = () => {
         </p>
       </section>
 
-      {/* Tecnologias Utilizadas */}
       <section className="sobre-tecnologias">
         <h2>Tecnologias Utilizadas</h2>
         <ul>
@@ -76,7 +75,6 @@ const Sobre = () => {
         </ul>
       </section>
 
-      {/* Redes Sociais e Contatos */}
       <section className="sobre-contatos">
         <h2>Equipe</h2>
         <div className="equipe-container">

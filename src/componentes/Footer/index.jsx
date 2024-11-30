@@ -21,7 +21,7 @@ function Footer() {
                     </a>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} Seu Nome ou Sua Empresa. Todos os direitos reservados.</p>
+                    <p>&copy; {new Date().getFullYear()} FinHwak. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>

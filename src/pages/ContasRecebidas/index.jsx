@@ -58,8 +58,7 @@ const ContasRecebidas = () => {
         const startDate = filterStartDate ? new Date(filterStartDate) : null;
         const endDate = filterEndDate ? new Date(filterEndDate) : null;
 
-        // const tipoMatch = item.categoria.tipo === filterTipo;
-        // const statusMatch = item.status === filterStatus;
+        
         const dateMatch = (!startDate || itemVenc >= startDate) && (!endDate || itemVenc <= endDate);
 
         return dateMatch;
